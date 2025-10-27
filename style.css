@@ -1,0 +1,7 @@
+*{
+    margin: 0; /* Le margin permet de réinitialiser les marges par défaut */
+    padding: 0; /* Le padding permet de réinitialiser les espaces internes par défaut */
+    font-family: 'Poppins', sans-serif; /* Définit la police de caractères pour tout le document */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la taille totale des éléments */
+    
+}
