@@ -3,5 +3,19 @@
     padding: 0; /* Le padding permet de réinitialiser les espaces internes par défaut */
     font-family: 'Poppins', sans-serif; /* Définit la police de caractères pour tout le document */
     box-sizing: border-box; /* Inclut le padding et la bordure dans la taille totale des éléments */
+
+}
+
+body {
+    background: #001e4d; /* Définit la couleur de fond du corps de la page */
+}
+
+.app{
+    background: #fff; /* Définit la couleur de fond de l'élément avec la classe "app" */
+    width: 90%; /* Définit la largeur de l'élément à 90% de son conteneur parent */
+    max-width: 600px; /* Définit la largeur maximale de l'élément */
+    margin: 100px auto 0; /* Centre l'élément horizontalement avec une marge supérieure de 100px */
+    border-radius: 10px; /* Arrondit les coins de l'élément */
+    padding: 30px; /* Ajoute un padding interne de 30px */
     
 }
