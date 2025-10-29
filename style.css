@@ -16,6 +16,37 @@ body {
     max-width: 600px; /* Définit la largeur maximale de l'élément */
     margin: 100px auto 0; /* Centre l'élément horizontalement avec une marge supérieure de 100px */
     border-radius: 10px; /* Arrondit les coins de l'élément */
-    padding: 30px; /* Ajoute un padding interne de 30px */
-    
+    padding: 30px; /* Ajoute un padding interne de 30px */   
+}
+
+.app .h1{
+    font-size: 25px; /* Définit la taille de la police pour l'élément avec la classe "h1" à 25px */
+    color: #001e4d; /* Définit la couleur du texte pour l'élément avec la classe "h1" */
+    font-weight: 600; /* Définit le poids de la police pour l'élément avec la classe "h1" */
+    border-bottom: 1px solid #333; /* Ajoute une bordure inférieure de 1px solide avec la couleur #333 */
+    padding-bottom: 30px; /* Ajoute un padding inférieur de 30px à l'élément avec la classe "h1" */
+}
+
+.quiz{
+    padding: 20px; /* Ajoute un padding interne de 20px à l'élément avec la classe "quiz" */
+
+}
+.quiz .h2{
+font-size: 18px; /* Définit la taille de la police pour l'élément avec la classe "h2" à 18px */
+color: #001e4d; /* Définit la couleur du texte pour l'élément avec la classe "h2" */
+font-weight: 600; /* Définit le poids de la police pour l'élément avec la classe "h2" */
+
+}
+
+.btn{
+    background: #fff; /* Définit la couleur de fond de l'élément avec la classe "btn" */
+    color:#222 ; /* Définit la couleur du texte pour l'élément avec la classe "btn" */
+    font-weight: 500; /* Définit le poids de la police pour l'élément avec la classe "btn" */
+    width: 100%; /* Définit la largeur de l'élément à 100% de son conteneur parent */
+    border: 1px solid #222; /* Ajoute une bordure de 1px solide avec la couleur #222 */
+    padding: 10px; /* Ajoute un padding vertical de 10px  */
+    margin: 10px 0; /* Ajoute une marge verticale de 10px et aucune marge horizontale */
+    text-align: left; /* Aligne le texte à gauche */
+    border-radius: 4px; /* Arrondit les coins de l'élément */
+    cursor: pointer; /* Change le curseur en pointeur lorsque l'utilisateur survole l'élément */ 
 }
