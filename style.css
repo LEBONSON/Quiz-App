@@ -48,5 +48,26 @@ font-weight: 600; /* Définit le poids de la police pour l'élément avec la cla
     margin: 10px 0; /* Ajoute une marge verticale de 10px et aucune marge horizontale */
     text-align: left; /* Aligne le texte à gauche */
     border-radius: 4px; /* Arrondit les coins de l'élément */
-    cursor: pointer; /* Change le curseur en pointeur lorsque l'utilisateur survole l'élément */ 
+    cursor: pointer; /* Change le curseur en pointeur lorsque l'utilisateur survole l'élément */
+    transition: all 0.3s; /* Ajoute une transition de 0.3s pour toutes les propriétés modifiées */
+
+}
+
+.btn:hover{
+    background: #222; /* Change la couleur de fond lorsque l'utilisateur survole l'élément */
+    color: #fff; /* Change la couleur du texte lorsque l'utilisateur survole l'élément */
+}
+
+#next-btn{
+    background: #001e4d; /* Définit la couleur de fond de l'élément avec l'ID "next-btn" */
+    color:#fff ; /* Définit la couleur du texte pour l'élément avec l'ID "next-btn" */
+    font-weight: 500; /* Définit le poids de la police pour l'élément avec la classe "btn" */
+    width: 150px; /* Définit la largeur de l'élément à 150px */
+    border: 0; /* Supprime la bordure de l'élément */
+    padding: 10px; /* Ajoute un padding vertical de 10px */
+    margin: 20px auto 0; /* Centre l'élément horizontalement avec une marge supérieure de 20px */
+    border-radius: 4px; /* Arrondit les coins de l'élément */
+    cursor: pointer; /* Change le curseur en pointeur lorsque l'utilisateur survole l'élément */
+    display: none; /* Affiche l'élément en tant que bloc */
+    transition: all 0.3s; /* Ajoute une transition de 0.3s pour toutes les propriétés modifiées */
 }
