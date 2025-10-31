@@ -41,9 +41,9 @@ const questions =[
     }
 ];
 
-const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-btn");
+const questionElement = document.getElementById("question"); // Récupérer l'élément de la question
+const answerButtons = document.getElementById("answer-buttons"); // Récupérer les boutons de réponse
+const nextButton = document.getElementById("next-btn"); // Récupérer le bouton suivant
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -61,4 +61,12 @@ function showQuestion() {
     let currentQuestion = questions[currentQuestionIndex]; // Obtenir la question actuelle
     let questionNo = currentQuestionIndex + 1;  // Numéro de la question actuelle
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question; // Afficher la question
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button"); // Créer un bouton pour chaque réponse
+        button.innerHTML = answer.text; // Définir le texte du bouton
+        button.classList.add("btn"); // Ajouter la classe CSS "btn"
+        answerButtons.appendChild(button); // Ajouter le bouton aux boutons de réponse
+    });
 }
+
