@@ -1,3 +1,5 @@
+const { reset } = require("nodemon");
+
 const questions =[
     {
         question: "Which is larget animal in the world?",
@@ -58,6 +60,7 @@ function startQuiz() {
 
 /* fonction pour afficher la question suivante */
 function showQuestion() {
+    resetState(); // Réinitialiser l'état des boutons
     let currentQuestion = questions[currentQuestionIndex]; // Obtenir la question actuelle
     let questionNo = currentQuestionIndex + 1;  // Numéro de la question actuelle
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question; // Afficher la question
@@ -70,3 +73,14 @@ function showQuestion() {
     });
 }
 
+
+function resetState() {
+    nextButton.style.display = "none"; // Cacher le bouton suivant
+    while (answerButtons.firstChild) {
+        answerButtons.removeChild(answerButtons.firstChild); // Supprimer tous les boutons de réponse existants
+    }
+
+}
+
+
+startQuiz(); // Démarrer le quiz lors du chargement de la page
