@@ -70,7 +70,11 @@ function showQuestion() {
         button.innerHTML = answer.text; // Définir le texte du bouton
         button.classList.add("btn"); // Ajouter la classe CSS "btn"
         answerButtons.appendChild(button); // Ajouter le bouton aux boutons de réponse
-    });
+        if (answer.correct) {
+            button.dataset.correct = answer.correct; // Marquer le bouton comme correct
+        }
+        button.addEventListener("click", selectAnswer); // Ajouter un écouteur d'événement pour la sélection de la réponse
+        });
 }
 
 
@@ -81,6 +85,19 @@ function resetState() {
     }
 
 }
+
+
+function selectAnswer(e) {
+    const selectedBtn = e.target; // Obtenir le bouton sélectionné
+    const isCorrect = selectedBtn.dataset.correct === "true"; // Vérifier si la réponse est correcte
+    if (isCorrect) {
+        selectedBtn.classList.add("correct"); // Ajouter la classe CSS "correct"
+    } else {
+        selectedBtn.classList.add("incorrect"); // Ajouter la classe CSS "incorrect"
+    }
+
+}
+
 
 
 startQuiz(); // Démarrer le quiz lors du chargement de la page
