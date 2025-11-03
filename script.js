@@ -94,7 +94,7 @@ function selectAnswer(e) {
         selectedBtn.classList.add("correct"); // Ajouter la classe CSS "correct"
     } else {
         selectedBtn.classList.add("incorrect"); // Ajouter la classe CSS "incorrect"
-    }
+       }
 
 }
 

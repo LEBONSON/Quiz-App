@@ -69,5 +69,11 @@ font-weight: 600; /* Définit le poids de la police pour l'élément avec la cla
     border-radius: 4px; /* Arrondit les coins de l'élément */
     cursor: pointer; /* Change le curseur en pointeur lorsque l'utilisateur survole l'élément */
     display: none; /* Affiche l'élément en tant que bloc */
-    transition: all 0.3s; /* Ajoute une transition de 0.3s pour toutes les propriétés modifiées */
+}
+
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
 }
