@@ -77,7 +77,7 @@ function showQuestion() {
         });
 }
 
-
+/* fonction pour réinitialiser l'état des boutons */
 function resetState() {
     nextButton.style.display = "none"; // Cacher le bouton suivant
     while (answerButtons.firstChild) {
@@ -95,7 +95,13 @@ function selectAnswer(e) {
     } else {
         selectedBtn.classList.add("incorrect"); // Ajouter la classe CSS "incorrect"
        }
-
+    Array.from(answerButtons.children).forEach(button => {
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct"); // Marquer la bonne réponse
+        }
+        button.disabled = true; // Désactiver tous les boutons après la sélection
+    });
+    nextButton.style.display = "block"; // Afficher le bouton suivant
 }
 
 
