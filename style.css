@@ -53,11 +53,13 @@ font-weight: 600; /* Définit le poids de la police pour l'élément avec la cla
 
 }
 
-.btn:hover{
+.btn:hover:not([disabled]){
     background: #222; /* Change la couleur de fond lorsque l'utilisateur survole l'élément */
     color: #fff; /* Change la couleur du texte lorsque l'utilisateur survole l'élément */
 }
-
+.btn:disabled{
+    cursor: no-drop; /* Change le curseur en "no-drop" lorsque l'élément est désactivé */
+}
 #next-btn{
     background: #001e4d; /* Définit la couleur de fond de l'élément avec l'ID "next-btn" */
     color:#fff ; /* Définit la couleur du texte pour l'élément avec l'ID "next-btn" */

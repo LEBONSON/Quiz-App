@@ -1,3 +1,4 @@
+const { handle } = require("express/lib/application");
 const { reset } = require("nodemon");
 
 const questions =[
@@ -92,6 +93,7 @@ function selectAnswer(e) {
     const isCorrect = selectedBtn.dataset.correct === "true"; // Vérifier si la réponse est correcte
     if (isCorrect) {
         selectedBtn.classList.add("correct"); // Ajouter la classe CSS "correct"
+        score++; // Incrémenter le score
     } else {
         selectedBtn.classList.add("incorrect"); // Ajouter la classe CSS "incorrect"
        }
@@ -104,6 +106,33 @@ function selectAnswer(e) {
     nextButton.style.display = "block"; // Afficher le bouton suivant
 }
 
+/* fonction pour afficher le score final */
+function showScore() {
+    resetState();   // Réinitialiser l'état des boutons
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`; // Afficher le score final
+    nextButton.innerHTML = "Play Again"; // Changer le texte du bouton en "Play Again"
+    nextButton.style.display = "block"; // Afficher le bouton
+}
 
+/* fonction pour gérer le bouton suivant */
+function handleNextButton() {
+    currentQuestionIndex++; // Passer à la question suivante
+    if (currentQuestionIndex < questions.length) {
+        showQuestion(); // Afficher la question suivante
+    }else {
+        showScore(); // Afficher le score final
+    }
+}
+
+
+/* Ajouter un écouteur d'événement au bouton suivant */
+
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
+        handleNextButton();
+    }else {
+        startQuiz();
+    }
+});
 
 startQuiz(); // Démarrer le quiz lors du chargement de la page
