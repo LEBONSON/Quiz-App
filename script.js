@@ -1,6 +1,8 @@
-const { handle } = require("express/lib/application");
-const { reset } = require("nodemon");
+const { handle } = require("express/lib/application"); // Importer le module 'handle' d'Express
+const { reset } = require("nodemon"); // Importer le module 'reset' de Nodemon
 
+
+/* Définir les questions du quiz */
 const questions =[
     {
         question: "Which is larget animal in the world?",
@@ -48,8 +50,8 @@ const questionElement = document.getElementById("question"); // Récupérer l'é
 const answerButtons = document.getElementById("answer-buttons"); // Récupérer les boutons de réponse
 const nextButton = document.getElementById("next-btn"); // Récupérer le bouton suivant
 
-let currentQuestionIndex = 0;
-let score = 0;
+let currentQuestionIndex = 0; // Index de la question actuelle
+let score = 0;  // Score du quiz
 
 /* fonction pour démarrer le quiz */
 function startQuiz() {
@@ -126,7 +128,6 @@ function handleNextButton() {
 
 
 /* Ajouter un écouteur d'événement au bouton suivant */
-
 nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.length) {
         handleNextButton();
